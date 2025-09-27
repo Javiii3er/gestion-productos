@@ -7,3 +7,6 @@ Aplicación desarrollada como práctica/parcial para la gestión de productos ut
 ## Instalación y ejecución local  
 npm install  
 npm run dev  
+
+## Link 
+https://statuesque-paletas-ea1bb0.netlify.app/

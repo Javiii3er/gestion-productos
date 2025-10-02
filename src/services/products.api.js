@@ -10,11 +10,12 @@ async function handleResponse(res) {
 
 export async function apiGetProducts() {
   const res = await fetch(`${BASE_URL}/products`);
-  return handleResponse(res);
+  const data = await handleResponse(res);
+  return data.products || []; 
 }
 
 export async function apiCreateProduct(payload) {
-  const res = await fetch(`${BASE_URL}/products`, {
+  const res = await fetch(`${BASE_URL}/products/add`, { 
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(payload),
